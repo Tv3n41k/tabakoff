@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТабакOFF</title>
+    <!-- Шрифты и стили -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Надежное подключение скрипта с defer -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Строгое окно верификации возраста -->
+    <div id="age-verification" class="modal-overlay">
+        <div class="glitch-box">
+            <div class="age-badge">18+</div>
+            <h2>ПОДТВЕРДИТЕ ВОЗРАСТ</h2>
+            <p>Этот ресурс содержит контент для взрослых. Пожалуйста, укажите вашу дату рождения, чтобы продолжить.</p>
+            
+            <form id="age-form" onsubmit="return false;">
+                <div class="input-group">
+                    <input type="date" id="birth-date" required>
+                </div>
+                <div id="age-error-msg" class="error-text-hidden">ДОСТУП ЗАПРЕЩЕН. ВАМ НЕТ 18 ЛЕТ.</div>
+                <div class="modal-buttons">
+                    <button type="submit" id="age-submit" class="btn-glitch btn-yes">ПОДТВЕРДИТЬ</button>
+                    <button type="button" id="age-leave" class="btn-glitch btn-no">ПОКИНУТЬ САЙТ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Основной интерфейс -->
+    <div id="main-content" class="content-hidden">
+        
+        <!-- Главный экран с неоновой рамкой -->
+        <header class="hero-section">
+            <div class="grain-overlay"></div>
+            <div class="hero-neon-frame">
+                <div class="hero-container">
+                    <h1 class="shop-title">ТАБАК<span class="glitch-text">OFF</span></h1>
+                    <p class="hero-subtitle">Сайт-витрина твоего любимого спота в Линево. Только оригинальная продукция, густой дым и сочный вкус.</p>
+                    <a href="#catalog" class="btn-action"><span>ОТКРЫТЬ КАТАЛОГ</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Секция каталога -->
+        <main id="catalog" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">МЕНЮ / КАТЕГОРИИ</h2>
+                <span class="scroll-tag">[ SELECT_YOUR_VIBE ]</span>
+            </div>
+            
+            <div class="catalog-grid">
+                
+                <div class="category-card" data-category="pods">
+                    <div class="card-bg-glow"></div>
+                    <div class="card-content">
+                        <div class="card-num">01 /</div>
+                        <h3>ПОД-СИСТЕМЫ</h3>
+                        <p>Твои любимые девайсы: от классики до новинок.</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="liquids">
+                    <div class="card-bg-glow"></div>
+                    <div class="card-content">
+                        <div class="card-num">02 /</div>
+                        <h3>ЖИДКОСТИ</h3>
+                        <p>Кислые, сладкие, ледяные. Огромный выбор миксов.</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="disposables">
+                    <div class="card-bg-glow"></div>
+                    <div class="card-content">
+                        <div class="card-num">03 /</div>
+                        <h3>ОДНОРАЗКИ</h3>
+                        <p>Максимум тяг, зарядка Type-C, чистый кайф.</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="hookahs">
+                    <div class="card-bg-glow"></div>
+                    <div class="card-content">
+                        <div class="card-num">04 /</div>
+                        <h3>КАЛЬЯНЫ</h3>
+                        <p>Табаки, угли и все необходимое для домашних сессий.</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="components">
+                    <div class="card-bg-glow"></div>
+                    <div class="card-content">
+                        <div class="card-num">05 /</div>
+                        <h3>КОМПЛЕКТУЮЩИЕ</h3>
+                        <p>Испарители, аккумуляторы (АКБ), картриджи и баки.</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Блок контактов и инфо -->
+        <footer class="shop-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h2 class="footer-title">НАШ МАГАЗИН</h2>
+                    <p class="footer-subtitle">// Линево, Новосибирская область</p>
+                    
+                    <div class="info-group">
+                        <span class="info-label">АДРЕС:</span>
+                        <span class="info-value">р.п. Линёво, 4-й микрорайон, д. 9А, этаж 1</span>
+                    </div>
+
+                    <div class="info-group">
+                        <span class="info-label">ГРАФИК РАБОТЫ:</span>
+                        <span class="info-value">Ежедневно с 09:00 до 21:00</span>
+                    </div>
+
+                    <div class="info-group">
+                        <span class="info-label">СВЯЗЬ:</span>
+                        <span class="info-value"><a href="https://t.me" target="_blank" class="footer-link">Telegram-канал спота</a></span>
+                    </div>
+                </div>
+                
+                <a href="https://yandex.ru" target="_blank" class="footer-map-banner">
+                    <div class="banner-glow-dot"></div>
+                    <span class="banner-title">ОТКРЫТЬ В ЯНДЕКС КАРТАХ</span>
+                    <span class="banner-sub">[ р.п. Линёво, 4-й мкр, д. 9А ]</span>
+                    <span class="banner-action-hint">КЛИКНИ ДЛЯ МАРШРУТА →</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ТАБАКOFF. 18+ Продажа никотиносодержащей продукции дистанционным способом не осуществляется.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ВСПЛЫВАЮЩИЕ ЛИСТЫ С ТОВАРАМИ -->
+    <div id="sheet-pods" class="products-sheet"><div class="sheet-container"><button class="btn-back">← НАЗАД</button><h2 class="sheet-title">ПОД-СИСТЕМЫ</h2><div class="products-grid"></div></div></div>
+    <div id="sheet-liquids" class="products-sheet"><div class="sheet-container"><button class="btn-back">← НАЗАД</button><h2 class="sheet-title">ЖИДКОСТИ</h2><div class="products-grid"></div></div></div>
+    <div id="sheet-disposables" class="products-sheet"><div class="sheet-container"><button class="btn-back">← НАЗАД</button><h2 class="sheet-title">ОДНОРАЗКИ</h2><div class="products-grid"></div></div></div>
+    <div id="sheet-hookahs" class="products-sheet"><div class="sheet-container"><button class="btn-back">← НАЗАД</button><h2 class="sheet-title">КАЛЬЯНЫ И ТАБАК</h2><div class="products-grid"></div></div></div>
+    <div id="sheet-components" class="products-sheet"><div class="sheet-container"><button class="btn-back">← НАЗАД</button><h2 class="sheet-title">КОМПЛЕКТУЮЩИЕ И АКБ</h2><div class="products-grid"></div></div></div>
+
+</body>
+</html>
